@@ -1,0 +1,152 @@
+html {
+    cursor: none;
+}
+
+body {
+  font-family: 'Calibri', sans-serif;
+}
+
+#cursor-dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 200;
+}
+
+#cursor-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: transparent;
+    z-index: 200;
+    transform: translate(-50%, -50%); /* Center the circle */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: none;
+    z-index: 12;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin-left: 32px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.start-project-button {
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-left: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.start-project-button:hover {
+    background-color: #333;
+}
+
+#video-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 4;
+}
+
+#myVideo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 4;
+}
+
+#scrolling-text {
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    line-height: 100vh;
+    text-align: center;
+    font-size: 10em;
+    color: white; 
+    animation: scroll 20s linear infinite;
+    z-index: 6;
+    mix-blend-mode: difference;
+    
+}
+
+/*#scrolling-text2 {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    line-height: 100vh;
+    text-align: center;
+    font-size: 10em;
+    color: black;
+    animation: scroll 20s linear infinite;
+    z-index: 3;
+}*/
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+#video-overlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 5;
+}
+
+#left-container {
+    position: absolute;
+    font-size: 45px;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: end;
+    justify-content: centre;
+    padding-left: 30px;
+}
